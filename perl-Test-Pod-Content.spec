@@ -53,3 +53,14 @@ rm -rf %buildroot
 %perl_vendorlib/*
 
 
+
+
+%changelog
+* Sat Apr 16 2011 Funda Wang <fwang@mandriva.org> 0.0.5-2mdv2011.0
++ Revision: 653622
+- rebuild for updated spec-helper
+
+* Wed Aug 25 2010 Jérôme Quelin <jquelin@mandriva.org> 0.0.5-1mdv2011.0
++ Revision: 573091
+- import perl-Test-Pod-Content
+
