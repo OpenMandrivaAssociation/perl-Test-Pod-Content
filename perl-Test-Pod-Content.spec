@@ -1,22 +1,21 @@
 %define upstream_name    Test-Pod-Content
-%define upstream_version 0.0.5
+%define upstream_version 0.0.6
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    1
 
 Summary:    Test a Pod's content
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Test/Test-Pod-Content-v%{upstream_version}.tar.gz
 
 BuildRequires: perl(Pod::Simple)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(version)
 BuildRequires: perl(Module::Build::Compat)
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This is a very simple module for testing a Pod's content. It is mainly
@@ -29,7 +28,7 @@ copyright notice:
  plan tests => scalar @filelist;
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-v%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
